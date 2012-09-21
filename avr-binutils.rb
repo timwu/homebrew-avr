@@ -48,4 +48,8 @@ class AvrBinutils < Formula
     system "make"
     system "make install"
   end
+ 
+  def patches
+    'http://sourceware.org/cgi-bin/cvsweb.cgi/src/bfd/elf32-avr.c.diff?cvsroot=src&only_with_tag=binutils-2_22-branch&r1=1.51&r2=1.51.2.1'
+  end
 end
