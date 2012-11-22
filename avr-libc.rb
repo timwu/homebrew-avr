@@ -15,7 +15,7 @@ class AvrLibc < Formula
     ENV.delete 'CC'
     ENV.delete 'CXX'
 
-    avr_gcc = Formula.factory('larsimmisch/avr/avr-gcc')
+    avr_gcc = Formula.factory('timwu/avr/avr-gcc')
     build = `./config.guess`.chomp
     system "./configure", "--build=#{build}", "--prefix=#{prefix}", "--host=avr"
     system "make install"

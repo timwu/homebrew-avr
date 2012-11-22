@@ -1,9 +1,9 @@
 require 'formula'
 
 class AvrBinutils < Formula
-  url 'http://ftp.gnu.org/gnu/binutils/binutils-2.22.tar.bz2'
+  url 'http://ftp.gnu.org/gnu/binutils/binutils-2.23.1.tar.bz2'
   homepage 'http://www.gnu.org/software/binutils/binutils.html'
-  md5 'ee0f10756c84979622b992a4a61ea3f5'
+  md5 '33adb18c3048d057ac58d07a3f1adb38'
 
   def options
     [["--disable-libbfd", "Disable installation of libbfd."]]
@@ -47,9 +47,5 @@ class AvrBinutils < Formula
 
     system "make"
     system "make install"
-  end
- 
-  def patches
-    'http://sourceware.org/cgi-bin/cvsweb.cgi/src/bfd/elf32-avr.c.diff?cvsroot=src&only_with_tag=binutils-2_22-branch&r1=1.51&r2=1.51.2.1'
   end
 end
